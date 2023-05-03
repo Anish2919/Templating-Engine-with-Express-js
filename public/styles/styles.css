@@ -1,0 +1,20 @@
+ul{
+    list-style-type: none;
+    color: white; 
+    font-size: 30px;
+}
+
+ul > li {
+    border: 1px solid black;
+    border-radius: 10px; 
+    margin: 10px 0; 
+    padding: 20px 10px; 
+}
+
+.odd {
+    background-color: burlywood;
+}
+
+.even {
+    background-color: cadetblue;
+}
