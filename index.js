@@ -8,15 +8,16 @@ app.set('view engine', 'hbs');
 app.engine('hbs', engine({
    layoutsDir: __dirname + '/views/layouts', 
    extname: 'hbs', 
-   defaultLayout: 'mirror_index'
+   defaultLayout: 'mirror_index', 
+   partialsDir: __dirname + '/views/partials', 
    
 }))
 
 app.use(express.static('public')); 
 
 app.get('/', (req, res) => {
-    // res.render('main', {layout:'index'}); 
-    res.render('main'); 
+    res.render('main', {layout:'index'}); 
+    // res.render('main'); 
 }); 
 
 app.listen(PORT, () => console.log(`Server running at ${PORT}`)); 
