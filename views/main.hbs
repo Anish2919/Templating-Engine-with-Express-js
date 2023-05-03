@@ -5,8 +5,11 @@
 
     <div class="dislikedMovies">
         {{> dislikedMovies}}
-        
     </div>
 
-
+    <h2>Suggested Movies</h2>
+    <ul>{{#each suggestedMovies }}
+        <li class="{{ this.colors }}">{{ this.name }}</li>
+        {{/each }}
+    </ul>
 </div>
